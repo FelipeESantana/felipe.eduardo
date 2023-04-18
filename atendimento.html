@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+	<title>atendimento</title>
+</head>
+<body class="back2">
+	<header>
+
+      <div class="caixa">
+    <h1> <img src="trivial.jpeg" alt="logo da trivial" class="trivial">
+
+      <nav>
+        <ul>
+          <li> <a href="index.html"> Home </a></li>
+          <li> <a href="Assinaturas.html"> Assinaturas </a></li>
+          <li> <a href="atendimento.html"> Atendimento </a></li>
+        </ul>
+      </nav>  
+      </div>
+    </header>
+     
+
+        <main>
+
+      <h2> Ouve algum problema? preencha o formulario abaixo para resolvermos o mais breve possivel</h2>
+
+      <form>
+        <label for="nomesobrenome"> Nome e Sobrenome </label>
+        <input type="text" id="nomesobrenome" class="input-padrao" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" class="input-padrao" required
+        placeholder="seuemail@dominio.com">
+
+        <label for="telefone"> Telefone </label>
+        <input type="number" id="telefone" class="input-padrao" required
+        placeholder="(XX) XXXXX-XXXX">
+
+
+
+        <fieldset>
+
+          <legend>Como podemos entrar em contato?</legend>
+          <label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email"> E-mail
+          </label>
+
+          <label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone"> Telefone 
+          </label>
+
+          <label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" checked> Whatsapp
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Qual foi o problema ocorrido? </legend>
+          <select>
+            <option>Esqueci minha senha ou problemas com o login</option>
+            <option>Alguem acessou minha conta</option>
+            <option>Erro de conexão</option>
+            <option>Site caindo</option>
+            <option>Outro problema</option>
+          </select>
+        </fieldset>
+
+        <label class="checkbox"><input type="checkbox" checked="">Gostaria de receber nossas atividades por e-mail?</label>
+        <input type="submit" value="Enviar formulário" class="enviar">
+       
+     </form>
+           <h3>Você podera receber nosso atendimento nos seguintes horarios</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Dia</th>
+                    <th>Horario</th>
+                  
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Segunda</td>
+                    <td>8h ~ 20h</td>
+                  </tr>
+                  <tr>
+                    <td>Terça</td>
+                    <td>8h ~ 18h</td>
+                  </tr>
+                  <tr>
+                    <td>Quarta</td>
+                    <td>8h ~ 20h</td>
+                  </tr>
+                  <tr>
+                    <td>Quinta</td>
+                    <td>8h ~ 18h</td>
+                  </tr>
+                  <tr>
+                    <td>Sexta</td>
+                    <td>8h ~ 22h</td>
+                  </tr> 
+               </tbody>
+             </table>
+        </main>
+
+	<footer>
+         <img src="trivial.jpeg" class="trivialp">
+         <p class="copyright">&copy; Copryght by Trivial/Netflix/Amazon-prime
+       </footer> 
+
+
+
+
+
+
+</body>
+</html>
