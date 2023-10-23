@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="index.css">
 
   </head>
-  <body background="series2.jpg" id="series">
+  <body id="series">
     <header>
 
       <div class="caixa">
@@ -29,18 +29,21 @@
   <script>
       var mensagemElement = document.getElementById("mensagem");
       var bannerWidth = document.getElementById("banner").offsetWidth;
-  
+      var Imagem = document.getElementById("animated-image");
+
       function animarMensagem() {
           var left = -200; // Inicializa a posição à esquerda da tela
+          
           var interval = setInterval(function() {
               left += 5; // Move 5 pixels à direita a cada iteração
               mensagemElement.style.left = left + "px";
-  
+
               // Verifica se a mensagem atingiu o final do banner
               if (left >= bannerWidth) {
                   clearInterval(interval); // Para a animação
                   setTimeout(function() {
-                      mensagemElement.style.left = "-200px"; // Reinicia a mensagem à esquerda
+                      mensagemElement.style.left = "-100px"; // Reinicia a mensagem à esquerda
+                      imagem.style.left = "calc(50% + 90px)";
                       animarMensagem(); // Inicia a animação novamente
                   }, 1000); // Espera 1 segundo antes de reiniciar
               }
@@ -53,6 +56,69 @@
       <img src="maca.jpeg" alt="Imagem" id="animated-image">
   </div>
   <script src="script.js"></script>
+
+
+ 
+    <div class="filmes">
+      <img src="filme1.jpeg">
+
+      <img src="filme2.jpeg">
+ 
+      <img src="filme3.jpeg">
+        
+      <img src="filme4.jpeg">
+      
+      <img src="filme6.jpeg">
+      
+      <img src="filme7.jpeg">
+       
+      <img src="filme8.jpeg">
+            
+      <img src="filme9.jpeg">
+
+      <img src="filme10.jpeg">
+                    
+      <img src="filme11.jpeg">
+
+    </div>
+   <form id="registration-Form">
+
+<label for="Nome">Nome do filme</label>
+<input type="text" id="Nome" required><br><br>
+
+<label for="Diretor">Nome do diretor</label>
+<input type="text" id="Diretor" required><br><br>
+
+<label for="Codigo">Codigo do filme</label>
+<input type="text" id="Codigo" required><br><br>
+
+
+<button type="submit">Cadastrar</button>
+
+   </form>
+    <div id="registration-result"></div>
+
+    <script>
+        const registrationForm = document.getElementById('registration-Form');
+        const registrationResult = document.getElementById('registration-result');
+
+        registrationForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const Nome = document.getElementById('Nome').value;
+            const Diretor = document.getElementById('Diretor').value;
+            const Codigo = document.getElementById('Codigo').value;
+
+            // Aqui você pode enviar os dados para um servidor para processamento
+            // Por exemplo, usando o método fetch() para fazer uma solicitação POST
+
+            // Simulação de sucesso (substitua por lógica real)
+            const successMessage = `Cadastro realizado com sucesso! Bem-vindo, ${Nome}!`;
+            registrationResult.textContent = successMessage;
+        });
+    </script>
+   
+
   </body>
 
 
