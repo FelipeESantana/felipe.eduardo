@@ -37,7 +37,7 @@
           var interval = setInterval(function() {
               left += 5; // Move 5 pixels à direita a cada iteração
               mensagemElement.style.left = left + "px";
-
+              imagem.style.left = (left + 310) + "px";
               // Verifica se a mensagem atingiu o final do banner
               if (left >= bannerWidth) {
                   clearInterval(interval); // Para a animação
@@ -81,43 +81,20 @@
       <img src="filme11.jpeg">
 
     </div>
-   <form id="registration-Form">
+   <form id="filmes-form">
 
 <label for="Nome">Nome do filme</label>
 <input type="text" id="Nome" required><br><br>
 
-<label for="Diretor">Nome do diretor</label>
-<input type="text" id="Diretor" required><br><br>
-
-<label for="Codigo">Codigo do filme</label>
-<input type="text" id="Codigo" required><br><br>
 
 
-<button type="submit">Cadastrar</button>
+
+
+
 
    </form>
-    <div id="registration-result"></div>
 
-    <script>
-        const registrationForm = document.getElementById('registration-Form');
-        const registrationResult = document.getElementById('registration-result');
 
-        registrationForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            const Nome = document.getElementById('Nome').value;
-            const Diretor = document.getElementById('Diretor').value;
-            const Codigo = document.getElementById('Codigo').value;
-
-            // Aqui você pode enviar os dados para um servidor para processamento
-            // Por exemplo, usando o método fetch() para fazer uma solicitação POST
-
-            // Simulação de sucesso (substitua por lógica real)
-            const successMessage = `Cadastro realizado com sucesso! Bem-vindo, ${Nome}!`;
-            registrationResult.textContent = successMessage;
-        });
-    </script>
-   
 
   </body>
 
